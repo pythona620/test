@@ -19,8 +19,8 @@ class TicketSkill(MycroftSkill):
 		home = self.get_numerical_response("get.source")
 		# get upper bound
 		room = self.get_numerical_response("get.destination")
-		answer =(home + room)
-		self.speak(answer)
+# 		answer =(home + room)
+# 		self.speak(answer)
 	def  enter_source_destination(self,stops):
 		while True:
         		source = home
@@ -38,12 +38,12 @@ class TicketSkill(MycroftSkill):
             			continue
 
 	stops = {'vizag', 'hyderabad', 'vijayawada'}
-	source, destination = enter_source_destination(stops)
+# 	source, destination = enter_source_destination(stops)
 	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 	def stop(self):
-# 		source, destination = enter_source_destination(stops)
+		source, destination = enter_source_destination(stops)
 # 		self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
-		return
-
+# 		return
+		pass
 def create_skill():
 	return TicketSkill()
