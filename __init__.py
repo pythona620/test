@@ -24,7 +24,7 @@ class TicketSkill(MycroftSkill):
 	def  enter_source_destination(self,stops):
 #     	while True:
         	source = home
-        	if source in stops:
+#         	if source in stops:
 			self.speak(source)
 #             		while True:
 #                 		destination = room
