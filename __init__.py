@@ -21,7 +21,7 @@ class TicketSkill(MycroftSkill):
 		room = self.get_numerical_response("get.destination")
 		answer =(source + destination)
 		self.speak(answer)
-	def  enter_source_destination(stops):
+	def  enter_source_destination(self,stops):
     	while True:
         	source = home
         	if source in stops:
@@ -30,10 +30,10 @@ class TicketSkill(MycroftSkill):
                 		if destination in stops:
                     			return source, destination
                 		else:
-                    			self.speak('Could you please enter a valid destination stop')
+                    			self.speak_dialog(valid.source)
                     			continue
         	else:
-            		self.speak('Could you please enter a valid boarding point')
+            		self.speak_dialog(valid.destination)
             		continue
 
 	stops = ['vizag', 'hyderabad', 'vijayawada']
