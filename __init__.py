@@ -25,13 +25,13 @@ class TicketSkill(MycroftSkill):
     	while True:
         	source = home
         	if source in stops:
-            	while True:
-                	destination = room
-                	if destination in stops:
-                    		return source, destination
-                	else:
-                    		self.speak('Could you please enter a valid destination stop')
-                    		continue
+            		while True:
+                		destination = room
+                		if destination in stops:
+                    			return source, destination
+                		else:
+                    			self.speak('Could you please enter a valid destination stop')
+                    			continue
         	else:
             		self.speak('Could you please enter a valid boarding point')
             		continue
