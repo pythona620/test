@@ -30,11 +30,11 @@ class TicketSkill(MycroftSkill):
                 	if destination in stops:
                     		return source, destination
                 	else:
-                    	print('Could you please enter a valid destination stop')
-                    	continue
+                    		self.speak('Could you please enter a valid destination stop')
+                    		continue
         	else:
-            	print('Could you please enter a valid boarding point')
-            	continue
+            		self.speak('Could you please enter a valid boarding point')
+            		continue
 
 	stops = ['vizag', 'hyderabad', 'vijayawada']
 	source, destination = enter_source_destination(stops)
