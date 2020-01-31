@@ -38,10 +38,12 @@ class TicketSkill(MycroftSkill):
             			continue
 
 	stops = {'vizag', 'hyderabad', 'vijayawada'}
-	source, destination = enter_source_destination(stops)
-	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
+# 	source, destination = enter_source_destination(stops)
+# 	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 	def stop(self):
-		pass
+		source, destination = enter_source_destination(stops)
+		self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
+		return
 
 def create_skill():
 	return TicketSkill()
