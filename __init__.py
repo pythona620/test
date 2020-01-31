@@ -16,20 +16,20 @@ class TicketSkill(MycroftSkill):
 	def handle_start_game_intent(self, message):
 		self.speak_dialog("start")
 		# get lower bound
-		home = self.get_numerical_response("get.source")
+# 		home = self.get_numerical_response("get.source")
 		# get upper bound
-		room = self.get_numerical_response("get.destination")
+# 		room = self.get_numerical_response("get.destination")
 # 		source = home
 # 		destination = room
 # 		answer =(home + room)
 # 		self.speak(answer)
 	def  ticket_test(self,stops):
 		while True:
-        		source = home
+        		source = self.get_numerical_response("get.source")
         		if source in stops:
 # 				self.speak(source)
             			while True:
-                			destination = room
+                			destination = self.get_numerical_response("get.destination")
                 			if destination in stops:
                     				return source, destination
                 			else:
