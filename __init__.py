@@ -39,9 +39,9 @@ class TicketSkill(MycroftSkill):
             			self.speak_dialog(valid.destination)
             			continue
 
-	stops = {'vizag', 'hyderabad', 'vijayawada'}
-# 	source, destination = ticket_test(stops)
-	home,room = ticket_test(stops)
+	stops = {"vizag", "hyderabad", "vijayawada"}
+	source, destination = ticket_test(stops)
+# 	home,room = ticket_test(stops)
 	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 	def stop(self):
 # 		source, destination = enter_source_destination(stops)
