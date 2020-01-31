@@ -19,8 +19,8 @@ class TicketSkill(MycroftSkill):
 		home = self.get_numerical_response("get.source")
 		# get upper bound
 		room = self.get_numerical_response("get.destination")
-		answer =(home + room)
-		self.speak(answer)
+# 		answer =(home + room)
+# 		self.speak(answer)
 	def  ticket_test(self,stops):
 		while True:
         		source = home
