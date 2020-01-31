@@ -7,7 +7,7 @@ from random import randint
 __author__ = 'prasad'
 LOGGER = getLogger(__name__)
 
-class NumberGuessSkill(MycroftSkill):
+class TicketSkill(MycroftSkill):
 	def get_numerical_response(self, dialog):
 		while True:
 			val = self.get_response(dialog)	
@@ -21,9 +21,26 @@ class NumberGuessSkill(MycroftSkill):
 		destination = self.get_numerical_response("get.destination")
 		answer =(source + destination)
 		self.speak(answer)
+	def  enter_source_destination(stops):
+    	while True:
+        	source = lowerBound
+        	if source in stops:
+            	while True:
+                	destination = upperBound
+                	if destination in stops:
+                    		return source, destination
+                	else:
+                    	print('Could you please enter a valid destination stop')
+                    	continue
+        	else:
+            	print('Could you please enter a valid boarding point')
+            	continue
 
+	stops = ['vizag', 'hyderabad', 'vijayawada']
+	source, destination = enter_source_destination(stops)
+	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 	def stop(self):
 		pass
 
 def create_skill():
-	return NumberGuessSkill()
+	return TicketSkill()
