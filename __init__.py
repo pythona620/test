@@ -9,6 +9,7 @@ LOGGER = getLogger(__name__)
 
 class TicketSkill(MycroftSkill):
 	def get_numerical_response(self, dialog):
+		stops = {"vizag", "hyderabad", "vijayawada"}
 		while True:
 			val = self.get_response(dialog)	
 			return val
@@ -39,12 +40,12 @@ class TicketSkill(MycroftSkill):
             			self.speak_dialog(valid.destination)
             			continue
 
-	stops = {"vizag", "hyderabad", "vijayawada"}
-	
+# 	stops = {"vizag", "hyderabad", "vijayawada"}
+	source, destination = ticket_test(stops)
 # 	home,room = ticket_test(stops)
 	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 	def stop(self):
-		source, destination = ticket_test(stops)
+		
 # 		source, destination = enter_source_destination(stops)
 # 		self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 # 		return
