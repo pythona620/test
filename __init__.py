@@ -23,14 +23,14 @@ class TicketSkill(MycroftSkill):
 # 		destination = room
 # 		answer =(home + room)
 # 		self.speak(answer)
-	def  ticket_test(self,stops):
+	def  ticket_test(self):
 		while True:
         		source = self.get_numerical_response("get.source")
-        		if source in stops:
+        		if source == stops:
 # 				self.speak(source)
             			while True:
                 			destination = self.get_numerical_response("get.destination")
-                			if destination in stops:
+                			if destination == stops:
                     				return source, destination
                 			else:
                     				self.speak_dialog(valid.source)
