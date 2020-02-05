@@ -8,10 +8,17 @@ LOGGER = getLogger(__name__)
 
 class TicketSkill(MycroftSkill):
 	def get_numerical_response(self, dialog):
-# 		stops = {"vizag", "hyderabad", "vijayawada"}
+		stops = {"vizag", "hyderabad", "vijayawada"}
 		while True:
 			val = self.get_response(dialog)	
-			return val
+			try:
+				val == stops
+				return val
+			except ValueError:
+				self.speak_dialog("invalid.input")
+			except:
+				self.speak_dialog("input.error")
+				
 	@intent_handler(IntentBuilder("").require("plan").optionally("going").optionally("Suggest"))
 	def handle_start_game_intent(self, message):
 		self.speak_dialog("start")
