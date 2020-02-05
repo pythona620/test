@@ -8,8 +8,9 @@ LOGGER = getLogger(__name__)
 
 class TicketSkill(MycroftSkill):
 	def get_numerical_response(self, dialog):
-		stops = {"vizag", "hyderabad", "vijayawada"}
+# 		stops = ("vizag", "hyderabad", "vijayawada")
 		while True:
+			stops = ("vizag", "hyderabad", "vijayawada")
 			val = self.get_response(dialog)	
 			try:
 				val == stops
