@@ -23,26 +23,26 @@ class TicketSkill(MycroftSkill):
 # 		destination = room
 # 		answer =(home + room)
 # 		self.speak(answer)
-	def  ticket_test(self):
-		while True:
-        		source = self.get_numerical_response("get.source")
-        		if source == stops:
-# 				self.speak(source)
-            			while True:
-                			destination = self.get_numerical_response("get.destination")
-                			if destination == stops:
-                    				return source, destination
-                			else:
-                    				self.speak_dialog(valid.source)
-                    				continue
-        		else:
-            			self.speak_dialog(valid.destination)
-            			continue
+# 	def  ticket_test(self):
+# 		while True:
+#         		source = self.get_numerical_response("get.source")
+#         		if source == stops:
+# # 				self.speak(source)
+#             			while True:
+#                 			destination = self.get_numerical_response("get.destination")
+#                 			if destination == stops:
+#                     				return source, destination
+#                 			else:
+#                     				self.speak_dialog(valid.source)
+#                     				continue
+#         		else:
+#             			self.speak_dialog(valid.destination)
+#             			continue
 
-	stops = ("vizag", "hyderabad", "vijayawada")
-# 	source, destination = ticket_test(stops)
-# 	home,room = ticket_test(stops)
-	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
+# 	stops = ("vizag", "hyderabad", "vijayawada")
+# # 	source, destination = ticket_test(stops)
+# # 	home,room = ticket_test(stops)
+# 	self.speak('The sourceing point is ' + source + 'and the destination is' + destination)
 	def stop(self):
 		
 # 		source, destination = enter_source_destination(stops)
