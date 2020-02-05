@@ -12,8 +12,7 @@ class TicketSkill(MycroftSkill):
 		while True:
 			stops = ("vizag", "hyderabad", "vijayawada")
 			val = self.get_response(dialog)	
-			try:
-				val == stops
+			if val == stops:
 				return val
 			except ValueError:
 				self.speak_dialog("invalid.input")
